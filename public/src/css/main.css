@@ -1,0 +1,11 @@
+table, .table
+{
+	font-size: 16px;
+}
+thead > tr > th:last-child,
+tbody > tr > td:last-child {
+	text-align: center
+}
+span.glyphicon:hover {
+	cursor: pointer;
+}
