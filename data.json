@@ -1,0 +1,21 @@
+[{
+	{
+		"id": 1,
+		"userId": 1,
+		//Taking advantage of html5 field type
+		"firstName": ["Jack", "text"],
+		"lastName": ["Richter", "text"]
+	},
+	{
+		"id": 2,
+		"userId": 1,
+		"firstName": ["Amber", "text"],
+		"lastName": ["Ellis", "text"]
+	},
+	{
+		"id": 3,
+		"userId": 1,
+		"firstName": ["Julio", "text"],
+		"lastName": ["Churches", "text"]
+	}
+}]
