@@ -12,6 +12,10 @@ angular.module('ContactsApp', ['ngRoute', 'ngResource'])
 				.when('/contacts', {
 					controller: 'ListController',
 					templateUrl: 'views/list.html'
+				})
+				.when('/contac/new', {
+					controller: 'NewController',
+					templateUrl: 'views/new.html'
 				});
 			$locationProvider.html5Mode(true);
 	}])
