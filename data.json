@@ -1,7 +1,6 @@
 [{
 		"id": 1,
 		"userId": 1,
-		//Taking advantage of html5 field type
 		"firstName": ["Jack", "text"],
 		"lastName": ["Richter", "text"]
 }, {
