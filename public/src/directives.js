@@ -13,7 +13,10 @@
 					required: '@'
 				},
 				link: function($scope, element, attr) {
-					console.log("I'm in");
+					$scope.$on('record:invalid', function(){
+						$scope[$scope.field].$setDirty();
+					});
+
 					$scope.types = FieldTypes;
 
 					$scope.remove = function(field){
