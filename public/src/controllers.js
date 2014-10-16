@@ -52,5 +52,9 @@
 					$scope.contact.$delete();
 					$location.url('/contacts');
 				}
+				$scope.save = function(){
+					$scope.contact.$save();
+					$location.url('/contacts');
+				}
 		}])
 })();
