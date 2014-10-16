@@ -1,16 +1,1 @@
-[{
-		"id": 1,
-		"userId": 1,
-		"firstName": ["Jack", "text"],
-		"lastName": ["Richter", "text"]
-}, {
-		"id": 2,
-		"userId": 1,
-		"firstName": ["Amber", "text"],
-		"lastName": ["Ellis", "text"]
-}, {
-		"id": 3,
-		"userId": 1,
-		"firstName": ["Julio", "text"],
-		"lastName": ["Churches", "text"]
-}]
+[{"id":1,"userId":1,"firstName":["Jack","text"],"lastName":["Richter","text"]},{"id":3,"userId":1,"firstName":["Julio","text"],"lastName":["Churches","text"]},{"firstName":["Santiago","text"],"lastName":["Palacio","text"],"email":["","email"],"homePhone":["","tel"],"cellPhone":["","tel"],"birthday":["","date"],"website":["","url"],"address":["","text"],"myColour":["#915eff","color"],"userId":1,"id":5},{"id":2,"userId":1,"firstName":["Amber Dude","text"],"lastName":["Ellis","text"]},{"firstName":["Catherine","text"],"lastName":["Ward","text"],"email":["me@catherineward.com","email"],"homePhone":["","tel"],"cellPhone":["","tel"],"birthday":["","date"],"address":["172 First Avenue, Toronto, Ontario","text"],"userId":1,"id":4},{"firstName":["Jenny","text"],"lastName":["Craig","text"],"email":[null,"email"],"homePhone":["647 204 8767","tel"],"cellPhone":["687","tel"],"birthday":["","date"],"website":["http://bootswatch.com/superhero/","url"],"address":["","text"],"userId":1,"id":6}]
