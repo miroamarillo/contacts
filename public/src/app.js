@@ -13,10 +13,11 @@ angular.module('ContactsApp', ['ngRoute', 'ngResource', 'ngMessages'])
 					controller: 'ListController',
 					templateUrl: 'views/list.html'
 				})
-				.when('/contac/new', {
+				.when('/contact/new', {
 					controller: 'NewController',
 					templateUrl: 'views/new.html'
 				});
+				// .otherwise({redirectTo: '/contacts'})
 			$locationProvider.html5Mode(true);
 	}])
 
