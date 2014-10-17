@@ -13,4 +13,10 @@
 			tel: ['Phone Number', 'should be a phone number'],
 			color: ['Color', 'should be a color']
 		})
+		.value('options', {})
+	    .run(function (options, Fields) {
+	        Fields.get().success(function (data) {
+	            options.displayed_fields = data;
+	        });
+	    });
 })();
