@@ -1,22 +1,28 @@
-var express = require('express'),
-    bodyParser = require('body-parser'),
-    session    = require('express-session'),
-    Bourne     = require('bourne'),
-    crypto     = require('crypto');
-
-var router = express.Router(),
-    db     = new Bourne('users.json');
+var express     = require('express'),
+    bodyParser  = require('body-parser'),
+    session     = require('express-session'),
+    Bourne      = require('bourne'),
+    crypto      = require('crypto'),
+    //Require Path
+    path        = require('path'),
+    router      = express.Router(),
+    db          = new Bourne('users.json');
 
 function hash (password) {
     return crypto.createHash('sha256').update(password).digest('hex');
 };
 
 router
-    .use(bodyParser.urlencoded())
+    .use(bodyParser.urlencoded({ extended: true }))
     .use(bodyParser.json())
-    .use(session({ secret: 'adshlqr3kqwefsadjklqrwefdsbzcjxcq4rewfadshj' }))
+    .use(session(
+    {
+            secret: 'adshlqr3kqwefsadjklqrwefdsbzcjxcq4rewfadshj',
+            resave: false,
+            saveUninitialized: false
+    }))
     .get('/login', function (req, res) {
-        res.sendfile('public/login.html');
+        res.sendFile( path.join(__dirname + '/public','login.html'));
     })
     .post('/login', function (req, res) {
         var user = {
@@ -36,6 +42,8 @@ router
         var user = {
             username: req.body.username,
             password: hash(req.body.password),
+            //This is where you add other requirements
+            //email: req.body.email,
             options: {}
         };
 
