@@ -1,10 +1,10 @@
 (function () {
 	angular.module('ContactsApp')
-		.controller('ListController', ['$scope','Contact', '$location', '$rootScope', function($scope, Contact, $location, $rootScope){
+		.controller('ListController', ['$scope','Contact', '$location', '$rootScope', 'options', function($scope, Contact, $location, $rootScope, options){
 			$rootScope.PAGE = "all";
 
 			$scope.contacts = Contact.query();
-			$scope.fields = ['firstName', 'lastName'];
+			$scope.fields = ['firstName', 'lastName'].concat(options.displayed_fields);
 
 			$scope.sort = function(field){
 				$scope.sort.field = field;
