@@ -57,7 +57,7 @@
 					$location.url('/contacts');
 				}
 		}])
-		.controller('SettingsController', ['$scope', '$rootScope', 'options', 'Fields', function($scope, $rootScope, options, Fields){
+		.controller('SettingsController', ['$scope', '$rootScope', 'options', 'Fields','$location', function($scope, $rootScope, options, Fields,$location){
 
 			$rootScope.PAGE = 'settings';
 
@@ -79,5 +79,8 @@
 
 				Fields.set(options.displayed_fields);
 			};
+			$scope.save = function(){
+				$location.url('/contacts');
+			}
 		}])
 })();
