@@ -1,6 +1,15 @@
-<h2>Settings</h2>
-<p>Choose the fields to be displayed in the list view</p>
-<div ng-repeat='field in allFields' class="checkbox checkbox-success checkbox-inline">
-        <input type='checkbox' value='{{field}}' ng-checked='{{fields.indexOf(field) > -1}}' ng-click='toggle(field)' id="inlineCheckbox{{$index + 1}}"/>
-        <label for="inlineCheckbox{{$index + 1}}">{{ field | labelCase }}</label>
+<div class="row">
+	<div class="col-sm-12">
+		<h2>Settings</h2>
+		<p>Choose the fields to be displayed in the list view</p>
+		<div ng-repeat='field in allFields' class="checkbox checkbox-success checkbox-inline">
+		        <input type='checkbox' value='{{field}}' ng-checked='{{fields.indexOf(field) > -1}}' ng-click='toggle(field)' id="inlineCheckbox{{$index + 1}}"/>
+		        <label for="inlineCheckbox{{$index + 1}}">{{ field | labelCase }}</label>
+		</div>
+	</div>
+</div>
+<div class="row form-group">
+	<div class="col-sm-12">
+		<button class="btn btn-success" ng-click="save()">Save</button>
+	</div>
 </div>
