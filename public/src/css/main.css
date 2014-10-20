@@ -9,4 +9,15 @@ tbody > tr > td:last-child {
 span.glyphicon:hover {
 	cursor: pointer;
 }
-
+.radio, .checkbox {
+	position: relative;
+	display: inline-block;
+	min-height: 21px;
+	margin: 0 10px 10px!important;
+	padding: 10px 10px 10px 30px;
+	background-color: #4E5D6C;
+}
+.radio label, .checkbox label {
+	font-size: 16px;
+	line-height: 1;
+}
