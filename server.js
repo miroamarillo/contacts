@@ -17,4 +17,6 @@ app
             //To use path.join you need to require the path. See above
         }
     })
-    .listen(3080);
+    .listen(3080, function(){
+        console.log('Listening on port 3080')
+    });
