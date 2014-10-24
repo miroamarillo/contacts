@@ -1,6 +1,8 @@
 (function () {
 	angular.module('ContactsApp')
-		.controller('ListController', ['$scope','Contact', '$location', '$rootScope', 'options', function($scope, Contact, $location, $rootScope, options){
+		.controller('ListController',
+						['$scope','Contact', '$location', '$rootScope', 'options',
+				function($scope, Contact, $location, $rootScope, options){
 			$rootScope.PAGE = "all";
 
 			$scope.contacts = Contact.query();
