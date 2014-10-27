@@ -20,7 +20,9 @@
 				$location.url('/contact/' + id);
 			}
 		}])
-		.controller('NewController', ['$scope','Contact', '$location', '$rootScope', function($scope, Contact, $location, $rootScope){
+		.controller('NewController',
+					['$scope','Contact', '$location', '$rootScope',
+			function($scope, Contact, $location, $rootScope){
 
 			$rootScope.PAGE = "new";
 
@@ -45,7 +47,9 @@
 				}
 			};
 		}])
-		.controller('SingleController', ['$scope', '$location', 'Contact', '$routeParams', '$rootScope', function($scope, $location, Contact, $routeParams, $rootScope){
+		.controller('SingleController',
+					['$scope', '$location', 'Contact', '$routeParams', '$rootScope',
+			function($scope, $location, Contact, $routeParams, $rootScope){
 				$rootScope.PAGE = "sibgle";
 
 				$scope.contact = Contact.get({ id: parseInt($routeParams.id, 10)});
@@ -59,7 +63,9 @@
 					$location.url('/contacts');
 				}
 		}])
-		.controller('SettingsController', ['$scope', '$rootScope', 'options', 'Fields','$location', function($scope, $rootScope, options, Fields,$location){
+		.controller('SettingsController',
+					['$scope', '$rootScope', 'options', 'Fields','$location',
+			function($scope, $rootScope, options, Fields, $location){
 
 			$rootScope.PAGE = 'settings';
 
