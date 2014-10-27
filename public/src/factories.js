@@ -1,11 +1,15 @@
 (function () {
 	angular.module('ContactsApp')
-		.factory('Contact', ['$resource', function($resource){
+		.factory('Contact',
+					['$resource',
+			function($resource){
 			return $resource('/api/contact/:id', {id: '@id' },
 				{'update': { method: 'PUT'}
 			});
 		}])
-		.factory('Fields', ['$q', '$http', 'Contact', function($q, $http, Contact){
+		.factory('Fields',
+					['$q', '$http', 'Contact',
+			function($q, $http, Contact){
 			var url = '/options/displayed_fields',
 				ignore = ['firstName', 'lastName', 'id', 'userId'],
 				allFields = [],
