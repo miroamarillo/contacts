@@ -1,6 +1,8 @@
 (function () {
 	angular.module('ContactsApp')
-		.directive('formField', ['$timeout', 'FieldTypes', function($timeout, FieldTypes){
+		.directive('formField',
+					['$timeout', 'FieldTypes',
+			function($timeout, FieldTypes){
 			// Runs during compile
 			return {
 				restrict: 'EA',
@@ -40,7 +42,9 @@
 				}
 			};
 		}])
-		.directive('newField', ['$filter', 'FieldTypes', function($filter, FieldTypes){
+		.directive('newField',
+					['$filter', 'FieldTypes',
+			function($filter, FieldTypes){
 			// Runs during compile
 			return {
 				restrict: 'EA',
